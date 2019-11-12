@@ -119,6 +119,12 @@ public class DemoApplication {
 			System.out.println(input);
 			return "new output for given variable: " + input;
 		};
+		//Third
+		BaseDefaultClass.LambdaFunctionalInterface thirdLambda = (String input) -> {
+			System.out.println(input);
+			input = input + "{Some additional String should go here}";
+			return "Changing the output again: " + input;
+		};
 
 		//Calling each lambda
 		bdc.runLambdaExample(firstLambda);
