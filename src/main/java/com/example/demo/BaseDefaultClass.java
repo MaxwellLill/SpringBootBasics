@@ -53,10 +53,10 @@ public class BaseDefaultClass {
         Checkout co = (Checkout)context.getBean("beanChanged");
         co.print();*/
 
-        checkout.addEmployee(new EmployeeImpl("Max", "Lill", "90 Address Rd", "001"));
-        checkout.addEmployee(new EmployeeImpl("Lance", "Goodfellow", "80 Address Rd", "002"));
-        checkout.addEmployee(new EmployeeImpl("Franco", "Loi", "70 Address Rd", "003"));
-        checkout.addEmployee(new EmployeeImpl("Mansoor", "Syed", "60 Address Rd", "004"));
+        checkout.addEmployee(new EmployeeImpl("Shahid", "Barton", "90 Address Rd", "001"));
+        checkout.addEmployee(new EmployeeImpl("Jovan", "Wilson", "80 Address Rd", "002"));
+        checkout.addEmployee(new EmployeeImpl("Nelly", "Holding", "70 Address Rd", "003"));
+        checkout.addEmployee(new EmployeeImpl("Yash", "Summers", "60 Address Rd", "004"));
         checkout.printEmployees();
     }
 
@@ -70,7 +70,7 @@ public class BaseDefaultClass {
         System.out.println("Number of employees: " + count);
 
         //Insert an employee instance into the database
-        String insertQuery = "INSERT INTO employees (first_name, last_name, address, employee_id) VALUES ('Mansoor', 'Syed', '60 Address Rd', '004')";
+        String insertQuery = "INSERT INTO employees (first_name, last_name, address, employee_id) VALUES ('Kareena', 'Willis', '60 Address Rd', '004')";
         jdbcTemplate.execute(insertQuery);      //Another way to execute the statement
 //        jdbcTemplate.update(insertQuery);     //Another way to execute the statement
 
@@ -168,7 +168,7 @@ public class BaseDefaultClass {
         System.out.println("Number of employee rows: " + count);
 
         //Insert an employee instance into the database that does not contain a database_id in the INSERT statement
-        String insertQuery = "INSERT INTO employees (first_name, last_name, address, employee_id) VALUES ('mansoor', 'Syed', '60 Address Rd', '004')";
+        String insertQuery = "INSERT INTO employees (first_name, last_name, address, employee_id) VALUES ('Kelis', 'Garrison', '60 Address Rd', '004')";
         jdbcTemplate.update(insertQuery);
 
         System.out.println("Performing Primary Key Tests Using prepared Statements and BATCH");
