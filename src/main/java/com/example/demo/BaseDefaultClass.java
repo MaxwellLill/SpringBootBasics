@@ -77,7 +77,7 @@ public class BaseDefaultClass {
         //The following is a prepared statement example although i think it could be better.
         //Open a connection. Create the SQL prepared statement with Bind Variables.
         Connection connection = dataSource.getConnection();
-        String preparedQuery = "INSERT INTO employees (database_id, address, first_name, last_name) VALUES (?,?,?,?)";
+        String preparedQuery = "INSERT INTO employees (address, first_name, last_name, employee_id) VALUES (?,?,?,?)";
         PreparedStatement preparedStatement = connection.prepareStatement(preparedQuery);
 
         preparedStatement.setString(1, "Single Prepared Address");

@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import com.example.demo.config.AppConfig;
 import com.example.demo.data.Checkout;
 import com.example.demo.data.CheckoutImpl;
+import com.example.demo.data.Employee;
+import com.example.demo.data.EmployeeImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -70,7 +72,7 @@ public class DemoApplication {
         }
 		catch(SQLException e){
 		    System.err.println(e);
-		    System.out.println("\nError Dealing with the Batch statements.");
+		    System.out.println("\nError Dealing with the single Database statements.");
         }
 
 
