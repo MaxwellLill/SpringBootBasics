@@ -256,6 +256,19 @@ public class BaseDefaultClass {
         return employees;
     }
 
+    //This function will help give some Debugging Practice.
+    public String exampleDebuggingFunction(String parameterOne, int parameterTwo) {
+        //Put Debug pointers anywhere in this function to see the states of objects how it's passing things around etc...
+        int variableThree;
+        variableThree = 5;
+        System.out.println(parameterOne + parameterTwo + variableThree);
+        parameterOne += " suffixString";
+        variableThree = 6;
+        System.out.println(parameterOne + variableThree);
+        parameterTwo = variableThree;
+        return "Combination + " + parameterOne;
+    }
+
     //Code that pertains to Lambda's
     interface LambdaFunctionalInterface{
         String outputStringOperation(String input);

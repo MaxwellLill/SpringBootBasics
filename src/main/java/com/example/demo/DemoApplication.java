@@ -129,5 +129,11 @@ public class DemoApplication {
 		//Calling each lambda
 		bdc.runLambdaExample(firstLambda);
 		bdc.runLambdaExample(secondLambda);
+
+
+		//Calling a function that has a nice testing ground for breakpoints.
+		System.out.println("Debugging Example Start");
+		bdc.exampleDebuggingFunction("POJS plain old java string", 3);
+		System.out.println("Debugging Example End");
 	}
 }
